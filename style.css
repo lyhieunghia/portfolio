@@ -1,110 +1,88 @@
 body {
     background-color: #fff;
+    margin: 0;
     padding: 50px;
-    font: 14px / 1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 14px / 1.6 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #727272;
-    font-weight: 400;
 }
 
-body {
-    display: block;
-    margin: 8px;
+/* Typography */
+
+p, ul, ol {
+    margin: 0 0 18px;
 }
 
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-}
-
-p, ul, ol, table, pre, dl {
-    margin: 0 0 20px;
-}
-
-li{
-    padding-left: 20px;
+li {
+    margin-bottom: 6px;
 }
 
 strong {
     color: #222;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
-div {
-    display: block;
-    unicode-bidi: isolate;
-}
+/* Layout */
 
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Header */
+
 .header {
-    text-align: left;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #ccc;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 25px;
 }
 
 .header h1 {
-    font-size: 2.2em;
+    font-size: 32px;
     margin: 0;
+    color: #222;
 }
 
-.header p a {
-    text-decoration: none;
-    color: #007bff;
-}
+/* Content layout */
 
 .main-content {
     display: flex;
-    margin-top: 20px;
+    gap: 40px;
 }
 
 .left-column {
-    width: 65%;
-}
-
-.left-column p, .left-column ul {
-    margin-bottom: 20px;
-}
-
-.left-column h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.left-column ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.left-column ul li {
-    margin-bottom: 8px;
-    line-height: 1.6;
+    flex: 2;
 }
 
 .right-column {
-    width: 35%;
+    flex: 1;
     text-align: center;
 }
 
-.right-column img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+/* Lists */
+
+.left-column ul {
+    list-style: none;
+    padding: 0;
 }
+
+.left-column ul li::before {
+    content: "• ";
+    color: #999;
+}
+
+/* Image */
+
+.right-column img {
+    width: 200px;
+    border-radius: 12px;
+}
+
+/* Links */
 
 a {
     text-decoration: none;
-    color: #007bff;
+    color: #0366d6;
 }
 
 a:hover {
